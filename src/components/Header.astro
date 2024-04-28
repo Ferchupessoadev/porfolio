@@ -1,3 +1,61 @@
-<header class="w-full">
-    <img class="w-36 h-auto bg-cover rounded-full" src="/foto-face.jpg" alt="Fernando Pessoa - Programador backend">
+---
+import Networks from './Networks.astro'
+---
+
+<header id="home"
+	class="w-full min-h-[100vh] flex px-4 py-16 z-10 flex-col md:flex-row dark:bg-[linear-gradient(to_top,var(--black),var(--dark-color))] items-center justify-center gap-10 ">
+	<div class="w-40 h-40 sm:w-44 sm:h-44 md:w-72 md:h-72 relative overflow-hidden rounded-full">
+		<img class="w-full absolute -top-5 -left-0" loading="lazy" src="/foto-face.jpg"
+			alt="Fernando Pessoa - Programador backend" />
+	</div>
+	<div class="flex flex-col gap-2 w-full md:w-1/2 relative">
+		<h1 class="text-lg sm:text-2xl md:text-3xl lg:text-4xl flex flex-col"><span
+				class="dark:text-white text-black font-bold font-firaCode">&#60; Fernando
+				Pessoa /&#62;</span><span class="font-extrabold font-firaCode">Software
+				Developer</span></h1>
+		<hr class="w-full border-gray-400">
+		<p
+			class="text-md md:text-xl p-2 dark:text-white bg-[rgba(0_0_0_/_.1)] dark:bg-[rgba(255_255_255_/_.01)] rounded-lg text-black">
+			¡Hola!
+			<img src="/wave.svg" class="w-8 h-8 inline move-hand-wave" alt="" /> Soy <span
+				class="text-red-800 font-firaCode">Fernando
+				Pessoa</span>, un <span class="text-red-800">desarrollador de
+				software</span> con experiencia en
+			crear soluciones
+			innovadoras y
+			eficientes. Mi enfoque se centra en el diseño de código limpio y en la resolución efectiva de problemas.
+		</p>
+		<div class="flex gap-5 flex-col md:flex-row md:justify-start items-center relative">
+			<Networks />
+			<a class="btn-grad rounded-lg  md:absolute right-0" href="/CV.pdf" download>Descargar
+				CV</a>
+		</div>
+	</div>
 </header>
+
+<style>
+	header h1 span:last-child {
+		background: linear-gradient(to right, #a02c59 0%, #c83873 10%, #3d51aa 20%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.btn-grad {
+		background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
+		padding: 12px 30px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.5s;
+		background-size: 200% auto;
+		color: white;
+		border-radius: 10px;
+		display: block;
+	}
+
+	.btn-grad:hover {
+		background-position: right center;
+		/* change the direction of the change here */
+		color: #fff;
+		text-decoration: none;
+	}
+</style>

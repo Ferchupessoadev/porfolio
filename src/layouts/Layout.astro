@@ -8,42 +8,54 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/foto-face.jpg" />
-    <title>{title}</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content={description} />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<title>{title}</title>
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/f845b9182b.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="flex flex-col items-center">
-    <slot />
+<body id="particles-js" class="flex flex-col items-center ">
+	<slot />
 </body>
 
 </html>
+
 <style is:global>
-    body,
-    main {
-        min-height: 100vh;
-    }
+	:root {
+		--black-dark: #222831;
+		--black-slate: #131313;
+		--primary: #76abae;
+		--white: #e6ffff;
+		--whiteblue: #e0ffff;
+		--black: #0f162a;
+		--dark-color: #132d46;
+		--body-dark: #141c31;
+		--body-black: #0c1327;
+	}
 
-    html {
-        font-family: system-ui, sans-serif;
-        background: #13151a;
-        color: #fff;
-    }
+	body {
+		min-height: 100vh;
+		scroll-behavior: smooth;
+	}
 
-    code {
-        font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
-    }
+
+
+
+
+	/* import Font Fira Code */
+	@font-face {
+		font-family: FiraCode;
+		src: url('/fonts/firacode/FiraCode.ttf') format('truetype');
+	}
+
+	html {
+		font-family: 'FiraCode';
+		color: #fff;
+	}
 </style>

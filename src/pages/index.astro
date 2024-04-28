@@ -1,14 +1,60 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro'
-import Navbar from '../components/Navbar.astro'
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { Navbar } from "../components/Navbar.jsx";
 ---
 
-<Layout title="Ferchu Dev">
-    <main class="relative flex justify-center w-full md:w-1/2 h-max pt-20 px-5 bg-[rgba(0_0_0_/_.2)]">
-        <Navbar />
-        <Header />
-        {msj}
-    </main>
+<Layout title="Ferchu Dev" description="Porfolio de Fernando M. Pessoa">
+	<Navbar client:only="preact" />
+	<Header />
+	<main class="w-full h-max flex justify-center dark:bg-[linear-gradient(to_bottom,var(--black),var(--dark-color))]">
+		<section id="projects" class="text-2xl md:w-3/4 ">
+			<h2 id="projects" class="project-h2 font-firaCode font-bold">Proyectos</h2>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quibusdam dolor ut veritatis rem? Quibusdam
+			obcaecati alias rerum distinctio modi perspiciatis. Repudiandae libero, officiis aliquid fugit tempora nihil ullam
+			soluta!
+		</section>
+	</main>
+	<footer class="bg-slate-700 w-full">
+		<p class="text-white">2024 - todos los derechos reservados</p>
+	</footer>
 </Layout>
+
+<style>
+	.project-h2 {
+		background: linear-gradient(to right, #a02c59 0%, #c83873 5%, #3d51aa 10%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	@keyframes move-hand-wave {
+		0% {
+			transform: translateX(100px);
+		}
+
+		100% {
+			transform: translateX(10px);
+		}
+
+	}
+
+	@keyframes move-arrow-down {
+		0% {
+			transform: rotate(90deg), translateY(-50px);
+		}
+
+		100% {
+			transform: rotate(90deg), translateY(0px);
+		}
+	}
+
+	@keyframes animate-side-theme {
+		0% {
+			transform: scale(.9);
+		}
+
+		100% {
+			transform: scale(1)
+		}
+	}
+</style>
