@@ -1,21 +1,22 @@
-import { useRef } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import { useTheme } from '../hooks/useTheme';
 import { LinkItem } from './LinkItem';
 
 export function Navbar() {
   const sideBar = useRef();
+  const navRef = useRef();
 
-  const [theme, setTheme, handlerClickModalTheme, btnThemeRef] = useTheme(
-    () => {
+  const [backgroundNav, setBackgroundNav] = useState(() =>
+    window.scrollY >= 10 ? 'bg-[rgba(0_0_0_/_0.2)]' : 'transparent',
+  );
+
+  const [theme, setTheme, handlerClickModalTheme, changeTheme, btnThemeRef] =
+    useTheme(() => {
       if (window.matchMedia('(prefers-color-scheme: dark)').matches)
         return 'dark';
       return 'light';
-    },
-  );
+    });
 
-  const handlerClickSideBar = () => {
-    sideBar.current.classList.toggle('-translate-x-[100%]');
-  };
   const changeThemeToSystem = () => {
     window.matchMedia('(prefers-color-scheme: dark)').matches
       ? setTheme((theme) => (theme = 'dark'))
@@ -23,14 +24,25 @@ export function Navbar() {
     handlerClickModalTheme();
   };
 
-  const changeTheme = (changeTotheme) => {
-    setTheme((theme) => (theme = changeTotheme));
-    handlerClickModalTheme();
-  };
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY >= 10) {
+        setBackgroundNav(
+          (backgroundNav) => (backgroundNav = 'bg-[rgba(0_0_0_/_.3)]'),
+        );
+      } else {
+        setBackgroundNav((backgroundNav) => (backgroundNav = 'bg-transparent'));
+      }
+    });
+  }, []);
 
   return (
     <>
-      <nav class="flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full md:w-max">
+      <nav
+        ref={navRef}
+        class={`${backgroundNav} md:bg-transparent flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full md:w-max`}
+      >
         <ul class="flex justify-center items-center gap-1">
           <div class="hidden md:flex justify-center items-center">
             <LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
@@ -40,7 +52,9 @@ export function Navbar() {
           </div>
           <button
             class="outline-none border-none md:hidden"
-            onClick={handlerClickSideBar}
+            onClick={() =>
+              sideBar.current.classList.toggle('-translate-x-[100%]')
+            }
           >
             <i class="fa-solid fa-bars text-3xl text-black dark:text-white"></i>
           </button>

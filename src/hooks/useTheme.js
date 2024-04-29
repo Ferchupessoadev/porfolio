@@ -18,10 +18,17 @@ export function useTheme(themeDefault) {
 		btnThemeRef.current.classList.toggle("hidden")
 	}
 
+	const changeTheme = (changeTotheme) => {
+		setTheme((theme) => (theme = changeTotheme));
+		handlerClickModalTheme();
+	};
+
+
 	return [
 		theme,
 		setTheme,
 		handlerClickModalTheme,
+		changeTheme,
 		btnThemeRef
 	]
 }

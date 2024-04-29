@@ -1,3 +1,3 @@
 # porfolio
 
-my porfolio with Astro, preact and tailwindcss
+My porfolio with Astro, preact and tailwindcss
