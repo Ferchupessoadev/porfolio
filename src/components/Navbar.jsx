@@ -43,6 +43,7 @@ export function Navbar() {
         ref={navRef}
         class={`${backgroundNav} md:bg-transparent flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full md:w-max`}
       >
+        {/* nav desktop */}
         <ul class="flex justify-center items-center gap-1">
           <div class="hidden md:flex justify-center items-center">
             <LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
@@ -95,26 +96,28 @@ export function Navbar() {
             </div>
           </li>
         </ul>
+        {/* Nav responsive */}
+        <nav
+          ref={sideBar}
+          class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 bottom-0 h-[calc(100vh_-_68px)] bg-blue-950 fixed z-20"
+        >
+          <ul class="flex flex-col w-full gap-5 pt-10">
+            <button onClick={handlerClickSidebar}>
+              <LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
+            </button>
+            <button onClick={handlerClickSidebar}>
+              <LinkItem hrefId="#projects" infoLink="Proyectos"></LinkItem>
+            </button>
+            <button onClick={handlerClickSidebar}>
+              <LinkItem hrefId="#skills" infoLink="Skills"></LinkItem>
+            </button>
+            <button onClick={handlerClickSidebar}>
+              <LinkItem hrefId="#contactme" infoLink="Contactame"></LinkItem>
+            </button>
+          </ul>
+        </nav>
       </nav>
-      <nav
-        ref={sideBar}
-        class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 bottom-0 h-[calc(100vh_-_68px)] bg-blue-950 fixed z-20"
-      >
-        <ul class="flex flex-col w-full gap-5 pt-10">
-          <button onClick={handlerClickSidebar}>
-            <LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
-          </button>
-          <button onClick={handlerClickSidebar}>
-            <LinkItem hrefId="#projects" infoLink="Proyectos"></LinkItem>
-          </button>
-          <button onClick={handlerClickSidebar}>
-            <LinkItem hrefId="#skills" infoLink="Skills"></LinkItem>
-          </button>
-          <button onClick={handlerClickSidebar}>
-            <LinkItem hrefId="#contactme" infoLink="Contactame"></LinkItem>
-          </button>
-        </ul>
-      </nav>
+
     </>
   );
 }
