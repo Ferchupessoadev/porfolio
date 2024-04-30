@@ -41,7 +41,7 @@ export function Navbar() {
     <>
       <nav
         ref={navRef}
-        class={`${backgroundNav} md:bg-transparent flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full md:w-max`}
+        class={`${backgroundNav} md:bg-transparent flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full md:w-max h-20`}
       >
         {/* nav desktop */}
         <ul class="flex justify-center items-center gap-1">
@@ -99,7 +99,7 @@ export function Navbar() {
         {/* Nav responsive */}
         <nav
           ref={sideBar}
-          class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 bottom-0 h-[calc(100vh_-_68px)] bg-blue-950 fixed z-20"
+          class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 bottom-0 h-[calc(100vh_-_80px)] bg-blue-950 fixed z-20"
         >
           <ul class="flex flex-col w-full gap-5 pt-10">
             <button onClick={handlerClickSidebar}>
