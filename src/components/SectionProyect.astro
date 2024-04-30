@@ -23,7 +23,9 @@ const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
 		>
 			{title}
 		</p>
-		<p class="text-[17px] font-mono text-gray-300">{description}</p>
+		<p class="text-[17px] font-mono text-gray-800 dark:text-gray-300">
+			{description}
+		</p>
 		<div class="flex gap-1">
 			{
 				urlCode && deployUrl ? (
@@ -36,8 +38,10 @@ const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
 				)
 			}
 		</div>
-		<div class="">
-			<p>Tecnologias utilizadas.</p>
+		<div>
+			<p class="text-[rgba(0_0_0)] dark:text-[rgba(255_255_255)]">
+				Tecnologias utilizadas.
+			</p>
 			<div class="flex gap-2">
 				{
 					skills.map((skill) => {
@@ -49,9 +53,13 @@ const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
 							case "Js":
 								return <JsIcon class="size-7" />;
 							case "PHP":
-								return <PHPIcon class="size-7" />;
+								return (
+									<PHPIcon class="size-7 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
+								);
 							case "Astro":
-								return <AstroIcon class="size-7" />;
+								return (
+									<AstroIcon class="size-7 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
+								);
 						}
 					})
 				}
