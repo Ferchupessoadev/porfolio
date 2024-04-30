@@ -8,6 +8,12 @@ const Contactame = () => {
     const email = useRef()
     const message = useRef()
 
+    const resetInputsForm = () => {
+        name.current.value = ""
+        surname.current.value = ""
+        email.current.value = ""
+        message.current.value = ""
+    }
 
     const handlerClickSubmit = async (ev) => {
         ev.preventDefault()
@@ -17,9 +23,12 @@ const Contactame = () => {
                 const response = await fetch(`https://ferchuemail.000webhostapp.com/sendemail/${ENDPOINT}`)
                 const result = await response.json()
                 alert(result.message)
+                resetInputsForm()
             } catch (error) {
                 alert("lo siento, tengo errores en mi servidor.")
             }
+        } else {
+            alert("campos incompletos")
         }
     }
     return (

@@ -1,29 +1,41 @@
 ---
-import GithubIcon from './icons/GithubIcon.astro'
-import LinkedinIcon from './icons/LinkedinIcon.astro'
-import TwitterIcon from './icons/TwitterIcon.astro'
-import PrimaryFace from './PrimaryFace.astro'
-import PrimaryTitle from './PrimaryTitle.astro'
-import WaveIcon from './icons/WaveIcon.astro'
-import ButtonCV from './ButtonCV.astro'
+import GithubIcon from "./icons/GithubIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import TwitterIcon from "./icons/TwitterIcon.astro";
+import PrimaryFace from "./PrimaryFace.astro";
+import PrimaryTitle from "./PrimaryTitle.astro";
+import WaveIcon from "./icons/WaveIcon.astro";
+import ButtonCV from "./ButtonCV.astro";
 ---
 
-<header id="home"
-	class="w-full min-h-[100vh] flex px-4 py-16 z-10 flex-col md:flex-row dark:bg-[linear-gradient(to_top,var(--black),var(--dark-color))] items-center justify-center gap-10">
+<header
+	id="home"
+	class="w-full min-h-[100vh] flex px-4 py-16 z-10 flex-col md:flex-row dark:bg-[linear-gradient(to_top,var(--black),var(--dark-color))] items-center justify-center gap-10"
+>
 	<PrimaryFace url="/foto-face.jpg" alt="Fernando pessoa" />
 	<div class="flex flex-col gap-2 w-full md:w-1/2 relative">
 		<PrimaryTitle />
-		<hr class="w-full border-gray-400">
+		<hr class="w-full border-gray-400" />
 		<p
-			class="text-md md:text-xl p-2 dark:text-white bg-[rgba(0_0_0_/_.1)] dark:bg-[rgba(255_255_255_/_.01)] rounded-lg text-black">
+			class="text-md md:text-xl p-2 dark:text-white bg-[rgba(0_0_0_/_.1)] dark:bg-[rgba(255_255_255_/_.01)] rounded-lg text-black"
+		>
 			¡Hola!
-			<WaveIcon /> Soy <span class="text-red-800 font-firaCode">Fernando Pessoa</span>, un <span
-				class="text-red-800">desarrollador de software</span> con experiencia en crear soluciones innovadoras y
-			eficientes. Mi enfoque se centra en el diseño de código limpio y en la resolución efectiva de problemas.
+			<WaveIcon /> Soy <span class="text-red-800 font-firaCode"
+				>Fernando Pessoa</span
+			>, un <span class="text-red-800">desarrollador de software</span> con
+			experiencia en crear soluciones innovadoras y eficientes. Mi enfoque
+			se centra en el diseño de código limpio y en la resolución efectiva de
+			problemas.
 		</p>
-		<div class="flex gap-5 flex-col md:flex-row md:justify-start items-center relative">
+		<div
+			class="flex gap-5 flex-col md:flex-row md:justify-start items-center relative"
+		>
 			<div class="flex gap-4 justify-center items-center">
-				<GithubIcon />
+				<a href="https://github.com/Ferchupessoadev" target="_blank">
+					<GithubIcon
+						class="size-12 transition-transform duration-300 ease-in dark:hover:scale-125 text-[rgba(0_0_0)] dark:text-[rgba(255_255_255)] hover:scale-125"
+					/>
+				</a>
 				<LinkedinIcon />
 				<TwitterIcon />
 			</div>
