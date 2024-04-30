@@ -19,6 +19,11 @@ export function Navbar() {
     handlerClickModalTheme();
   };
 
+  const handlerClickSidebar = () => {
+    sideBar.current.classList.toggle('-translate-x-[100%]')
+    setBackgroundNav((backgroundNav) => (backgroundNav = 'bg-blue-950'));
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
@@ -47,9 +52,7 @@ export function Navbar() {
           </div>
           <button
             class="outline-none border-none md:hidden"
-            onClick={() =>
-              sideBar.current.classList.toggle('-translate-x-[100%]')
-            }
+            onClick={handlerClickSidebar}
           >
             <i class="fa-solid fa-bars text-3xl text-black dark:text-white"></i>
           </button>
@@ -95,8 +98,23 @@ export function Navbar() {
       </nav>
       <nav
         ref={sideBar}
-        class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 bottom-0 h-[calc(100vh_-_60px)] bg-blue-950 absolute z-20"
-      ></nav>
+        class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 bottom-0 h-[calc(100vh_-_68px)] bg-blue-950 fixed z-20"
+      >
+        <ul class="flex flex-col w-full gap-5 pt-10">
+          <button onClick={handlerClickSidebar}>
+            <LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
+          </button>
+          <button onClick={handlerClickSidebar}>
+            <LinkItem hrefId="#projects" infoLink="Proyectos"></LinkItem>
+          </button>
+          <button onClick={handlerClickSidebar}>
+            <LinkItem hrefId="#skills" infoLink="Skills"></LinkItem>
+          </button>
+          <button onClick={handlerClickSidebar}>
+            <LinkItem hrefId="#contactme" infoLink="Contactame"></LinkItem>
+          </button>
+        </ul>
+      </nav>
     </>
   );
 }
