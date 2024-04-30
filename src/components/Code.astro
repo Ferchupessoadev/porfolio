@@ -1,0 +1,17 @@
+---
+import GithubIcon from "./icons/GithubIconSvg.astro";
+interface props {
+	hrefUrl: string;
+}
+
+const { hrefUrl } = Astro.props;
+---
+
+<a
+	class="flex gap-3 rounded-xl px-4 py-1 bg-[rgba(255_255_255_/_.1)] w-max h-max"
+	target="_blank"
+	href={hrefUrl}
+>
+	<GithubIcon class="size-7" />
+	<p>Github</p>
+</a>

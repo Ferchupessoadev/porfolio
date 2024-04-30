@@ -10,12 +10,7 @@ export function Navbar() {
     window.scrollY >= 10 ? 'bg-[rgba(0_0_0_/_0.2)]' : 'transparent',
   );
 
-  const [theme, setTheme, handlerClickModalTheme, changeTheme, btnThemeRef] =
-    useTheme(() => {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-        return 'dark';
-      return 'light';
-    });
+  const [theme, setTheme, handlerClickModalTheme, changeTheme, btnThemeRef] = useTheme("dark");
 
   const changeThemeToSystem = () => {
     window.matchMedia('(prefers-color-scheme: dark)').matches
