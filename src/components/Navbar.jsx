@@ -41,7 +41,7 @@ export function Navbar() {
     <>
       <nav
         ref={navRef}
-        class={`${backgroundNav} md:bg-transparent flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full md:w-max h-20`}
+        class={`${backgroundNav} flex justify-between md:justify-center z-50 items-center fixed top-0 p-4 w-full h-20 backdrop-blur-sm`}
       >
         {/* nav desktop */}
         <ul class="flex justify-center items-center gap-1">

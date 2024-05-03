@@ -5,6 +5,7 @@ import { Navbar } from "../components/Navbar.jsx";
 import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
 import Contactame from "../components/Contactame";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Ferchu Dev" description="Porfolio de Fernando M. Pessoa">
@@ -17,11 +18,7 @@ import Contactame from "../components/Contactame";
 		<Skills />
 		<Contactame client:only="preact" />
 	</main>
-	<footer class="dark:bg-[var(--dark-color)] w-full flex justify-center">
-		<p class="text-black dark:text-white">
-			Hecho con amor por Fernando M. Pessoa
-		</p>
-	</footer>
+	<Footer />
 </Layout>
 
 <style>
