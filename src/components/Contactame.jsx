@@ -74,6 +74,7 @@ const Contactame = () => {
 						type="submit"
 						onClick={handlerClickSubmit}
 						class="bg-blue-700 dark:hover:bg-blue-500 cursor-pointer rounded-lg px-10 py-1 w-max m-auto"
+						value="Enviar Correo"
 					/>
 				</form>
 			</section >
