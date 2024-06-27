@@ -38,3 +38,9 @@ npm install
 ```bash
 npm run dev
 ```
+
+## build project for production.
+
+```bash
+npm run build
+```
