@@ -10,4 +10,8 @@ My porfolio with Astro, preact and tailwindcss
 
 ## Dark theme
 
-![Tema oscuro de un portafolio](./doc/theme-dark.gif)
+![Tema oscuro de un portfolio](./doc/theme-dark.gif)
+
+## Light theme
+
+![Tema claro de un portfolio](./doc/light-theme.gif)
