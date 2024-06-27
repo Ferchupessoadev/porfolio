@@ -15,3 +15,26 @@ My porfolio with Astro, preact and tailwindcss
 ## Light theme
 
 ![Tema claro de un portfolio](./doc/light-theme.gif)
+
+# Development setup
+
+First, clone the repo and cd into the project
+
+```bash
+git clone https://github.com/Ferchupessoadev/porfolio
+cd porfolio
+```
+
+# Local setup
+
+install dependencies:
+
+```bash
+npm install
+```
+
+# Run project in to local server
+
+```bash
+npm run dev
+```
