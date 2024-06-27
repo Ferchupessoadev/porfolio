@@ -8,6 +8,6 @@ My porfolio with Astro, preact and tailwindcss
   </a>
 </div>
 
-## Theme dark
+## Dark theme
 
 ![Tema oscuro de un portafolio](./doc/theme-dark.gif)
