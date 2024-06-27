@@ -102,7 +102,7 @@ export function Navbar() {
 				ref={sideBar}
 				class="w-1/2 transition-all md:hidden duration-200 -translate-x-[100%] ease-in left-0 top-20 h-[calc(100vh_-_80px)] bg-blue-950 fixed z-20"
 			>
-				<ul class="flex flex-col justify-center h-full w-full gap-5 pt-10">
+				<ul class="flex flex-col justify-start h-full w-full gap-5 pt-10">
 					<button onClick={handlerClickSidebar}>
 						<LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
 					</button>
