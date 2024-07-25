@@ -1,0 +1,28 @@
+<a class="btn-grad w-max h-max px-4 py-1 mt-9" {...Astro.props}>
+	<slot> 
+</a>
+<style>
+	.btn-grad {
+		background-image: linear-gradient(
+			to right,
+			#1a2980 0%,
+			#26d0ce 51%,
+			#1a2980 100%
+		);
+		padding: 12px 30px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.5s;
+		background-size: 200% auto;
+		color: white;
+		border-radius: 10px;
+		display: block;
+	}
+
+	.btn-grad:hover {
+		background-position: right center;
+		/* change the direction of the change here */
+		color: #fff;
+		text-decoration: none;
+	}
+</style>

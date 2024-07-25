@@ -5,65 +5,78 @@ import HTMLIcon from "./icons/HTMLIcon.astro";
 import JsIcon from "./icons/JsIcon.astro";
 import PHPIcon from "./icons/PHPIcon.astro";
 import LaravelIcon from "./icons/LaravelIcon.astro";
-import ReactIcon from './icons/ReactJsIcon.astro'
-import MysqlIcon from './icons/MysqlIcon.astro'
-import LinuxIcon from './icons/LinuxIcon.astro'
-import BashIcon from './icons/BashIcon.astro'
-import DjangoIcon from './icons/DjangoIcon.astro'
-import LuaIcon from './icons/LuaIcon.astro'
+import ReactIcon from "./icons/ReactJsIcon.astro";
+import MysqlIcon from "./icons/MysqlIcon.astro";
+import LinuxIcon from "./icons/LinuxIcon.astro";
+import BashIcon from "./icons/BashIcon.astro";
+import DjangoIcon from "./icons/DjangoIcon.astro";
+import LuaIcon from "./icons/LuaIcon.astro";
 ---
 
 <section id="skills" class="text-2xl p-3 w-full md:w-3/4 my-10">
-	<h2 class="skills-h2 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-firaCode font-bold py-5">
+	<h2
+		class="skills-h2 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-firaCode font-bold py-5"
+	>
 		&#60; Skills/&#62;
 	</h2>
 	<div class="flex flex-row flex-wrap gap-5 items-center justify-center">
 		<div
-			class="flex flex-col gap-5 w-full sm:w-auto bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3">
+			class="flex flex-col gap-5 w-full sm:w-auto bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3"
+		>
 			<p class="dark:text-white text-black">Frontend</p>
 			<div class="flex gap-4 flex-wrap justify-center">
 				<HTMLIcon class="size-20" />
 				<CssIcon class="size-20" />
 				<JsIcon class="size-20" />
 				<ReactIcon class="size-20" />
-				<AstroIcon class="size-20 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
+				<AstroIcon
+					class="size-20 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]"
+				/>
 			</div>
 		</div>
 		<div
-			class="flex flex-col gap-5 w-full sm:w-auto  bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3">
+			class="flex flex-col gap-5 w-full sm:w-auto bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3"
+		>
 			<p class="dark:text-white text-black">Backend</p>
 			<div class="flex gap-4">
-				<PHPIcon class="size-20 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
+				<PHPIcon
+					class="size-20 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]"
+				/>
 				<LaravelIcon class="size-20" />
 			</div>
 		</div>
 		<div
-			class="flex flex-col gap-5 w-full sm:w-auto  bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3">
+			class="flex flex-col gap-5 w-full sm:w-auto bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3"
+		>
 			<p class="dark:text-white text-black">Servidores</p>
 			<div class="flex gap-4">
-				<MysqlIcon class="size-20 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
+				<MysqlIcon
+					class="size-20 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]"
+				/>
 				<LinuxIcon class="size-20" />
 				<BashIcon class="size-20 dark:text-white text-black" />
 			</div>
 		</div>
 		<div
-			class="flex flex-col gap-5 w-full sm:w-auto  bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3">
+			class="flex flex-col gap-5 w-full sm:w-auto bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] rounded-md p-3"
+		>
 			<p class="dark:text-white text-black">Aprendiendo</p>
 			<div class="flex gap-4">
 				<DjangoIcon class="size-20" />
 				<LuaIcon class="size-20" />
 			</div>
 		</div>
-
 	</div>
 </section>
 
 <style>
 	.skills-h2 {
-		background: linear-gradient(to right,
-				#a02c59 0%,
-				#c83873 5%,
-				#3d51aa 10%);
+		background: linear-gradient(
+			to right,
+			#a02c59 0%,
+			#c83873 5%,
+			#3d51aa 10%
+		);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

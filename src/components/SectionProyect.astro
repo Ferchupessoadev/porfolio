@@ -4,10 +4,12 @@ import CssIcon from "./icons/CssIcon.astro";
 import JsIcon from "./icons/JsIcon.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import PHPIcon from "./icons/PHPIcon.astro";
+import LuaIcon from "./icons/LuaIcon.astro";
 import Code from "./Code.astro";
 import Deploy from "./Deploy.astro";
 
-const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
+const { title, description, hrefImg, skills , urlCode, deployUrl } = Astro.props;
+skills as HtmlCollectionOf<string>
 ---
 
 <div class="w-full h-max lg:h-80 flex lg:flex-row flex-col gap-5">
@@ -33,8 +35,14 @@ const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
 						<Code hrefUrl={urlCode} />
 						<Deploy hrefUrl={deployUrl} />
 					</>
+				) : urlCode ? (
+					<>
+						<Code hrefUrl={urlCode} />
+					</>
 				) : (
-					<Deploy hrefUrl={deployUrl} />
+					<>
+						<Deploy hrefUrl={deployUrl} />
+					</>
 				)
 			}
 		</div>
@@ -59,6 +67,10 @@ const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
 							case "Astro":
 								return (
 									<AstroIcon class="size-7 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
+								);
+							case "Lua":
+								return (
+									<LuaIcon class="size-7 text-[rgb(0_0_0)] dark:text-[rgb(255_255_255)]" />
 								);
 						}
 					})

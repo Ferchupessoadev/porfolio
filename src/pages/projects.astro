@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Navbar } from "../components/Navbar.jsx";
+import Project from "../components/SectionProyect.astro";
+---
+
+
+<Layout title="Projects" description="Projectos de Fernando M. Pessoa">
+	<Navbar client:only="preact" />
+	<div class="flex flex-col gap-8 lg:gap-5 md:w-3/4 w-full pt-20">
+	<h1 class="text-5xl font-bold">Proyectos</h1>
+	<Project
+		title="Blog"
+		description="Este blog promueve el software libre, ofreciendo artículos, tutoriales y noticias sobre tecnologías de código abierto."
+		hrefImg="/proyectos/proyecto2.png"
+		skills={["HTML", "Css", "Astro", "PHP"]}
+		deployUrl="https://novumcreciendojuntos.free.nf/"
+	/>
+	<Project
+		title="App Pomodoro"
+		description="Este proyecto trata de una aplicación web de Pomodoro que cuenta con un listado de tareas integrado. Todos los datos se almacenan en el localStorage"
+		hrefImg="/proyectos/proyecto1.png"
+		skills={["HTML", "Css", "Js"]}
+		urlCode="https://github.com/Ferchupessoadev/web-pomodoro"
+		deployUrl="https://ferchupessoadev.github.io/webpomodoro/"
+	/>
+	<Project
+		title="Mi configuración de neovim"
+		description="Este es un proyecto de configuración de neovim en el cual tuve que aprender un poco de Lua"
+		hrefImg="/proyectos/proyecto1.png"
+		skills={["Lua"]}
+		urlCode="https://github.com/Ferchupessoadev/nvim"
+	/>
+</div>
+</Layout>
