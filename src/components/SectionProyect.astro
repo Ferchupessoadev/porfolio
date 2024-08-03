@@ -7,7 +7,7 @@ import PHPIcon from "./icons/PHPIcon.astro";
 import Code from "./Code.astro";
 import Deploy from "./Deploy.astro";
 
-const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
+const { title, description, hrefImg, skills, urlCode, deployUrl, altimg } = Astro.props;
 ---
 
 <div class="w-full h-max lg:h-80 flex lg:flex-row flex-col gap-5">
@@ -15,6 +15,7 @@ const { title, description, hrefImg, skills, urlCode, deployUrl } = Astro.props;
 		<img
 			class="rounded-2xl transition-transform duration-300 ease-in bg-no-repeat bg-center bg-cover dark:hover:scale-[1.02] size-full"
 			src={hrefImg}
+			alt={altimg}
 		/>
 	</div>
 	<div class="w-full flex flex-col h-max lg:w-1/2 gap-3">

@@ -3,27 +3,41 @@ import Project from "./SectionProyect.astro";
 ---
 
 <section id="projects" class="text-2xl px-3 md:p-0 w-full md:w-3/4 mx-10">
-	<h2 id="projects" class="project-h2 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-firaCode font-bold py-5">
+	<h2
+		id="projects"
+		class="project-h2 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-firaCode font-bold py-5"
+	>
 		&#60; Proyectos/&#62;
 	</h2>
 	<div class="flex flex-col gap-8 lg:gap-5">
-		<Project title="Blog"
+		<Project
+			title="Blog"
 			description="Este blog promueve el software libre, ofreciendo artículos, tutoriales y noticias sobre tecnologías de código abierto."
-			hrefImg="/proyectos/proyecto2.png" skills={["HTML", "Css" , "Astro" , "PHP" ]}
-			deployUrl="https://novumcreciendojuntos.free.nf/" />
-		<Project title="App Pomodoro"
+			hrefImg="/proyectos/proyecto2.png"
+			skills={["HTML", "Css", "Astro", "PHP"]}
+			deployUrl="https://novumcreciendojuntos.free.nf/"
+			altimg="Este blog promueve el software libre, ofreciendo artículos, tutoriales y noticias sobre tecnologías de código abierto."
+		/>
+
+		<Project
+			title="App Pomodoro"
 			description="Este proyecto trata de una aplicación web de Pomodoro que cuenta con un listado de tareas integrado. Todos los datos se almacenan en el localStorage"
-			hrefImg="/proyectos/proyecto1.png" skills={["HTML", "Css" , "Js" ]}
+			hrefImg="/proyectos/proyecto1.png"
+			skills={["HTML", "Css", "Js"]}
 			urlCode="https://github.com/Ferchupessoadev/web-pomodoro"
-			deployUrl="https://ferchupessoadev.github.io/webpomodoro/" />
+			deployUrl="https://ferchupessoadev.github.io/webpomodoro/"
+			altimg="Este proyecto trata de una aplicación web de Pomodoro que cuenta con un listado de tareas integrado. Todos los datos se almacenan en el localStorage"
+		/>
 	</div>
 </section>
 <style>
 	.project-h2 {
-		background: linear-gradient(to right,
-				#a02c59 0%,
-				#c83873 5%,
-				#3d51aa 10%);
+		background: linear-gradient(
+			to right,
+			#a02c59 0%,
+			#c83873 5%,
+			#3d51aa 10%
+		);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
