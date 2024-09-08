@@ -48,7 +48,7 @@ export function Navbar() {
 					<div class="hidden md:flex justify-center items-center">
 						<LinkItem hrefId="#home" infoLink="Inicio"></LinkItem>
 						<LinkItem hrefId="#projects" infoLink="Proyectos"></LinkItem>
-						<LinkItem hrefId="#skills" infoLink="Skills"></LinkItem>
+						<LinkItem hrefId="#skills" infoLink="Habilidades"></LinkItem>
 						<LinkItem hrefId="#contactme" infoLink="Contactame"></LinkItem>
 					</div>
 					<button
