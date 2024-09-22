@@ -4,8 +4,10 @@ import Header from "../components/Header.astro";
 import { Navbar } from "../components/Navbar.jsx";
 import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
-import Contactame from "../components/Contactame";
+import { Contactame } from "../components/Contactame.jsx";
 import Footer from "../components/Footer.astro";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 ---
 
 <Layout title="Ferchu Dev" description="Porfolio de Fernando M. Pessoa">
@@ -15,9 +17,10 @@ import Footer from "../components/Footer.astro";
 		class="w-full h-max flex py-10 flex-col items-center dark:bg-[linear-gradient(to_bottom,var(--black),var(--dark-color))]">
 		<Projects />
 		<Skills />
-		<Contactame client:only="preact" />
+		<Contactame client:only="react" />
 	</main>
 	<Footer />
+	<ToastContainer client:only="react" />
 </Layout>
 
 <style>

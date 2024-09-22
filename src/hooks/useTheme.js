@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'preact/hooks';
+import { useState, useEffect, useRef } from 'react';
 
 export function useTheme(themeDefault) {
 	const [theme, setTheme] = useState(themeDefault)
