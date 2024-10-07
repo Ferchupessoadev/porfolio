@@ -20,7 +20,7 @@ export function Navbar() {
 	};
 
 	const handlerClickSidebar = () => {
-		sideBar.current.classNameList.toggle('-translate-x-[100%]')
+		sideBar.current.classList.toggle('-translate-x-[100%]')
 		setBackgroundNav((backgroundNav) => (backgroundNav = 'bg-blue-950'));
 	}
 
