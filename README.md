@@ -1,3 +1,6 @@
+[![Generate a build and push to another branch](https://github.com/Ferchupessoadev/porfolio/actions/workflows/publish.yml/badge.svg?event=deployment_status)](https://github.com/Ferchupessoadev/porfolio/actions/workflows/publish.yml)
+
+
 # Porfolio
 
 My porfolio with Astro, preact and tailwindcss
