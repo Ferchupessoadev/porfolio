@@ -1,19 +1,19 @@
 ---
 import GithubIcon from "./icons/GithubIcon.astro";
 interface props {
-	hrefUrl: string;
+    hrefUrl: string;
 }
 
-const { hrefUrl } = Astro.props;
+const { hrefUrl } = Astro.props as props;
 ---
 
 <a
-	class="flex gap-3 rounded-xl px-4 py-1 bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] w-max h-max"
-	target="_blank"
-	href={hrefUrl}
+    class="flex gap-3 rounded-xl px-4 py-1 bg-[rgba(0_0_0_/_.2)] dark:bg-[rgba(255_255_255_/_.1)] w-max h-max"
+    target="_blank"
+    href={hrefUrl}
 >
-	<GithubIcon
-		class="size-7 text-[rgba(0_0_0)] dark:text-[rgba(255_255_255)]"
-	/>
-	<p class="text-[rgba(0_0_0)] dark:text-[rgba(255_255_255)]">Github</p>
+    <GithubIcon
+        class="size-7 text-[rgba(0_0_0)] dark:text-[rgba(255_255_255)]"
+    />
+    <p class="text-[rgba(0_0_0)] dark:text-[rgba(255_255_255)]">Github</p>
 </a>
