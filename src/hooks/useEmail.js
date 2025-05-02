@@ -26,7 +26,6 @@ export function useEmail({ to, subject, message }) {
             });
 
             const response = await fetch(import.meta.env.PUBLIC_API_URL_EMAIL, requestOptions)
-            console.log('.env:', import.meta.env);
             const data = await response.json();
             toast.dismiss(toastId);
             toast.success(data.message, {
@@ -40,8 +39,6 @@ export function useEmail({ to, subject, message }) {
                 position: "top-left",
                 autoClose: 1000
             });
-
-            console.log('.env:', import.meta.env);
         }
 
     }
