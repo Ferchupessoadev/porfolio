@@ -6,7 +6,7 @@ on:
             - main # The branch name your are commit the new changes
 
 env:
-    PUBLIC_API_URL_EMAIL: "https://emailapi.ferchudev.com/send"
+    PUBLIC_API_URL_EMAIL: "https://emailapi.ferchudev.com"
 
 jobs:
     build:
